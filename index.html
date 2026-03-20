@@ -1,415 +1,797 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startex Motion Recreation</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="#top">
-          <span class="brand__mark"></span>
-          <span class="brand__name">Startex</span>
-        </a>
-        <nav class="site-nav">
-          <a href="#services">Services</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#team">Meet our team</a>
-        </nav>
-        <a class="pill-button pill-button--small" href="#contact">Get in touch</a>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plat-form | Motion Recreation</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a class="brand-lockup" href="#top" aria-label="plat-form home">
+      <span class="brand-lockup__name">plat-form</span>
+      <span class="brand-lockup__tag">You innovate,<br />we automate.</span>
+    </a>
 
-      <main id="top">
-        <section class="hero section">
-          <div class="hero__frame">
-            <div class="hero__copy">
-              <p class="eyebrow">★★★★★ Rated 4.9/5</p>
-              <h1>Expert consulting that drives real growth</h1>
-              <p class="lede">
-                Elevate your business with expert insights, tailored strategies,
-                and responsive support designed to move your next stage forward.
-              </p>
-              <div class="hero__actions">
-                <a class="pill-button" href="#contact">Get in touch</a>
-                <a class="text-button" href="#services">What we do</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <aside class="site-menu" id="siteMenu" aria-hidden="true">
+    <nav class="site-menu__nav">
+      <a href="#top">Home</a>
+      <a href="#products">Products</a>
+      <a href="#process">Process</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team">Team</a>
+      <a href="#journal">Journal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <main id="top">
+    <section class="hero section">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__noise" aria-hidden="true"></div>
+
+      <div class="hero__shell">
+        <div class="hero__content">
+          <h1 class="hero__headline">
+            <span class="hero__headline-line">The smarter</span>
+            <span class="hero__headline-line">way to <em>build, run,</em></span>
+            <span class="hero__headline-line">and <em>scale</em> your</span>
+            <span class="hero__headline-line">business.</span>
+          </h1>
+
+          <div class="hero__meta">
+            <div class="hero__lead">
+              <p class="hero__eyebrow">See Platform in action</p>
+              <p class="hero__copy">Join our guided tour and explore all features live.</p>
+            </div>
+            <a class="button button--accent" href="#contact">
+              <span class="button__icon">◫</span>
+              <span>Book a Demo</span>
+            </a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="metric-card">
+              <strong class="metric-card__value" data-count="97.8" data-suffix="%">0%</strong>
+              <span class="metric-card__label">Uptime</span>
+              <span class="metric-card__caption">30-day monitoring</span>
+            </div>
+            <div class="metric-card">
+              <strong class="metric-card__value" data-count="31.2" data-prefix="+" data-suffix="%">0%</strong>
+              <span class="metric-card__label">Performance</span>
+              <span class="metric-card__caption">AI optimised bundle</span>
+            </div>
+          </div>
+        </div>
+
+        <article class="feature-card">
+          <div class="feature-card__media">
+            <span class="feature-card__beam"></span>
+          </div>
+          <div class="feature-card__body">
+            <div>
+              <p class="feature-card__title">Neural Network</p>
+              <p class="feature-card__caption">// Latest Release</p>
+            </div>
+            <a class="feature-card__cta" href="#products" aria-label="View products">→</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Products</p>
+        <h2 class="section-title">A modular line-up of adaptive infrastructure tools.</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="panel product-card product-card--media reveal" data-delay="0">
+          <div class="product-render product-render--shell"></div>
+          <div class="product-card__footer">
+            <span class="product-card__label">Adaptive Unit</span>
+            <a class="circle-link" href="#process" aria-label="Read about adaptive unit">→</a>
+          </div>
+        </article>
+
+        <article class="panel product-card product-card--media reveal" data-delay="80">
+          <div class="product-render product-render--core"></div>
+          <div class="product-card__footer">
+            <span class="product-card__label">Neural Core</span>
+            <a class="circle-link" href="#analytics" aria-label="Read about neural core">→</a>
+          </div>
+        </article>
+
+        <article class="panel product-card product-card--media reveal" data-delay="160">
+          <div class="product-render product-render--stack"></div>
+          <div class="product-card__footer">
+            <span class="product-card__label">Scale Engine</span>
+            <a class="circle-link" href="#pricing" aria-label="Read about scale engine">→</a>
+          </div>
+        </article>
+
+        <article class="panel product-card product-card--shield reveal" data-delay="40">
+          <div>
+            <p class="product-card__label">Shield Core</p>
+            <p class="product-card__copy">Protect every layer with an always-learning security envelope.</p>
+          </div>
+          <div class="shield-render">
+            <span></span>
+          </div>
+          <a class="circle-link circle-link--bottom" href="#faq" aria-label="Read about shield core">→</a>
+        </article>
+
+        <article class="panel product-card product-card--icon reveal" data-delay="120">
+          <div class="product-glyph">
+            <span></span>
+            <span></span>
+          </div>
+        </article>
+
+        <article class="panel product-card product-card--specs reveal" data-delay="200">
+          <p class="product-card__eyebrow">Neural Core 4.0b</p>
+          <div class="spec-line"></div>
+          <p class="product-card__stat"><strong>92.4%</strong> predictive accuracy</p>
+          <p class="product-card__caption">Join early beta</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services-process" id="process">
+      <div class="service-ribbon reveal">
+        <div class="service-ribbon__brand">
+          <span class="service-ribbon__logo">plat-form</span>
+        </div>
+        <button class="service-pill" data-service="0" type="button">learning</button>
+        <button class="service-pill" data-service="1" type="button">architecture</button>
+        <button class="service-pill" data-service="2" type="button">protection</button>
+        <button class="service-pill active" data-service="3" type="button">growth</button>
+        <div class="service-ribbon__note">
+          <span class="service-ribbon__dots"></span>
+          <p id="serviceNote">Design, optimize, scale, and secure.</p>
+        </div>
+      </div>
+
+      <div class="process-intro reveal">
+        <div class="process-intro__ticks">
+          <span class="tick tick--active"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+        </div>
+        <a class="process-intro__link" href="#pricing">Explore Services in Depth →</a>
+      </div>
+
+      <h2 class="mega-wordmark reveal">Our Process</h2>
+
+      <div class="process-grid">
+        <article class="panel process-visual reveal">
+          <div class="process-stage active" data-process-visual="0">
+            <div class="cube-render cube-render--connect"></div>
+          </div>
+          <div class="process-stage" data-process-visual="1">
+            <div class="cube-render cube-render--optimize"></div>
+          </div>
+          <div class="process-stage" data-process-visual="2">
+            <div class="cube-render cube-render--scale"></div>
+          </div>
+        </article>
+
+        <article class="process-center">
+          <div class="panel process-top reveal">
+            <p class="process-top__label">Platform Process</p>
+            <div class="process-dots">
+              <button class="process-dot active" type="button" data-step="0" aria-label="Go to step 1"></button>
+              <button class="process-dot" type="button" data-step="1" aria-label="Go to step 2"></button>
+              <button class="process-dot" type="button" data-step="2" aria-label="Go to step 3"></button>
+            </div>
+          </div>
+
+          <article class="panel process-copy reveal" id="processCopy">
+            <div class="process-step active" data-process-step="0">
+              <h3>Step 1 — Connect Stack</h3>
+              <p>Plug Platform into your existing stack and let the orchestration layer map dependencies, surface gaps, and prepare the right architecture automatically.</p>
+              <div class="process-metric">
+                <strong class="process-metric__value">12</strong>
+                <span class="process-metric__unit">sec</span>
+                <span class="process-metric__caption">Average discovery time</span>
               </div>
             </div>
 
-            <div class="hero__media">
-              <div class="scene scene--hero">
-                <div class="scene__blob scene__blob--a"></div>
-                <div class="scene__blob scene__blob--b"></div>
-                <div class="scene__shelf"></div>
-                <div class="scene__plant"></div>
-                <div class="scene__figure">
-                  <span class="scene__head"></span>
-                  <span class="scene__body"></span>
-                </div>
+            <div class="process-step" data-process-step="1">
+              <h3>Step 2 — Auto Optimize</h3>
+              <p>Once connected, the system continuously fine-tunes configuration and resource allocation in real time. The platform adapts to usage patterns without manual tweaking.</p>
+              <div class="process-metric">
+                <strong class="process-metric__value">55</strong>
+                <span class="process-metric__unit">sec</span>
+                <span class="process-metric__caption">Average optimization cycle</span>
               </div>
             </div>
 
-            <div class="hero__overlay hero__overlay--one"></div>
-            <div class="hero__overlay hero__overlay--two"></div>
-          </div>
-
-          <div class="hero__partners reveal">
-            <span>We&apos;ve partnered with</span>
-            <div class="hero__logos">
-              <span>LOGO</span>
-              <span>ORBIX</span>
-              <span>ALTO</span>
-              <span>FLOWSTATE</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="logo-strip reveal">
-          <span>LORDO</span>
-          <span>OMIC</span>
-          <span>ABX</span>
-          <span>SONET</span>
-          <span>VANT</span>
-          <span>PRISM</span>
-        </section>
-
-        <section class="section section--compact section--centered" id="services">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Expert consulting tailored to your business success</h2>
-
-          <div class="compare-card reveal stagger-group" data-stagger="110">
-            <div class="compare-card__col">
-              <h3>Other Firms</h3>
-              <ul class="feature-list">
-                <li class="reveal">Generic Strategies</li>
-                <li class="reveal">Limited Guidance</li>
-                <li class="reveal">Hidden Fees</li>
-              </ul>
-            </div>
-            <div class="compare-card__col compare-card__col--accent">
-              <h3>With Startex</h3>
-              <ul class="feature-list">
-                <li class="reveal">Tailored Consulting</li>
-                <li class="reveal">Dedicated Support</li>
-                <li class="reveal">Transparent Pricing</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section--centered" id="features">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Reliable expertise to drive your greatest success</h2>
-
-          <div class="carousel reveal" data-carousel>
-            <button class="carousel__control carousel__control--prev" type="button" aria-label="Previous slide">
-              &larr;
-            </button>
-
-            <div class="carousel__viewport">
-              <article class="case-card">
-                <div class="case-card__media case-card__media--gold"></div>
-                <div class="case-card__body">
-                  <h3>Business consulting</h3>
-                  <p>Gain a clear path for growth with focused strategic support.</p>
-                </div>
-              </article>
-
-              <article class="case-card">
-                <div class="case-card__media case-card__media--rose"></div>
-                <div class="case-card__body">
-                  <h3>Operational efficiency</h3>
-                  <p>Streamline execution with sharper processes and practical structure.</p>
-                </div>
-              </article>
-
-              <article class="case-card">
-                <div class="case-card__media case-card__media--mist"></div>
-                <div class="case-card__body">
-                  <h3>Market research &amp; analysis</h3>
-                  <p>Uncover new opportunities through customer and market insight.</p>
-                </div>
-              </article>
-
-              <article class="case-card">
-                <div class="case-card__media case-card__media--slate"></div>
-                <div class="case-card__body">
-                  <h3>Digital transformation</h3>
-                  <p>Modernize systems without losing momentum or team alignment.</p>
-                </div>
-              </article>
-
-              <article class="case-card">
-                <div class="case-card__media case-card__media--olive"></div>
-                <div class="case-card__body">
-                  <h3>Retention strategy</h3>
-                  <p>Turn customer understanding into stronger long-term performance.</p>
-                </div>
-              </article>
-            </div>
-
-            <button class="carousel__control carousel__control--next" type="button" aria-label="Next slide">
-              &rarr;
-            </button>
-
-            <div class="carousel__meta">
-              <div class="carousel__rating">★★★★★ Rated 4.9/5</div>
-              <p>
-                Startex revolutionized our customer understanding, boosting retention like never before.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section--centered">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Key benefits that set us apart from other firms</h2>
-
-          <div class="benefit-grid stagger-group" data-stagger="90">
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Unified consultation</h3>
-              <p>Strategy, operations, and delivery move as one connected system.</p>
-            </article>
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Tailored solutions</h3>
-              <p>Recommendations are built around your stage, team, and market.</p>
-            </article>
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Expert insights</h3>
-              <p>Every decision is grounded in practical experience and sharp analysis.</p>
-            </article>
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Data strategies</h3>
-              <p>Insight is turned into concrete action plans with measurable outcomes.</p>
-            </article>
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Ongoing support</h3>
-              <p>You keep a responsive partner after the initial strategy is delivered.</p>
-            </article>
-            <article class="benefit-card reveal">
-              <span class="benefit-card__icon"></span>
-              <h3>Seamless execution</h3>
-              <p>Recommendations are designed to fit real teams and real timelines.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section--centered" id="pricing">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Flexible pricing tailored to your business needs</h2>
-
-          <div class="pricing-grid stagger-group" data-stagger="140">
-            <article class="pricing-card reveal">
-              <h3>Standard</h3>
-              <p class="pricing-card__price">$99</p>
-              <p class="pricing-card__label">Starter consultation package</p>
-              <a class="text-button" href="#contact">Request consultation</a>
-              <ul class="feature-list feature-list--compact">
-                <li>Personalized strategy session</li>
-                <li>Business health snapshot</li>
-                <li>Foundational action plan</li>
-                <li>Follow-up recommendations</li>
-              </ul>
-            </article>
-
-            <article class="pricing-card pricing-card--featured reveal">
-              <div class="pricing-card__badge">Most popular</div>
-              <h3>Premium</h3>
-              <p class="pricing-card__price">$299</p>
-              <p class="pricing-card__label">Advanced growth package</p>
-              <a class="pill-button" href="#contact">Get started</a>
-              <ul class="feature-list feature-list--compact">
-                <li>Extended deep-dive audit</li>
-                <li>Market opportunity analysis</li>
-                <li>Implementation roadmap</li>
-                <li>Priority support channel</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section--centered">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">A proven process to achieve your biggest goals</h2>
-          <a class="pill-button reveal" href="#contact">Get in touch</a>
-
-          <div class="timeline">
-            <article class="timeline__item timeline__item--left reveal">
-              <div class="timeline__media timeline__media--warm"></div>
-              <div class="timeline__content">
-                <span class="timeline__dot"></span>
-                <h3>Simple booking</h3>
-                <p>Choose a focused consultation path and set the direction quickly.</p>
-                <a class="text-button" href="#contact">Discover more</a>
+            <div class="process-step" data-process-step="2">
+              <h3>Step 3 — Scale Confidently</h3>
+              <p>With intelligent forecasts and guardrails in place, Platform expands or contracts capacity with minimal latency while keeping performance and reliability stable.</p>
+              <div class="process-metric">
+                <strong class="process-metric__value">3</strong>
+                <span class="process-metric__unit">min</span>
+                <span class="process-metric__caption">Average scale-up time</span>
               </div>
-            </article>
+            </div>
+          </article>
+        </article>
 
-            <article class="timeline__item timeline__item--right reveal">
-              <div class="timeline__content">
-                <span class="timeline__dot"></span>
-                <h3>Tailored strategy</h3>
-                <p>We map goals, constraints, and opportunities into a precise action plan.</p>
-                <a class="text-button" href="#contact">Discover more</a>
-              </div>
-              <div class="timeline__media timeline__media--amber"></div>
-            </article>
+        <div class="process-side">
+          <article class="panel process-controls reveal">
+            <button class="process-arrow" id="processPrev" type="button" aria-label="Previous step">←</button>
+            <button class="process-arrow" id="processNext" type="button" aria-label="Next step">→</button>
+          </article>
 
-            <article class="timeline__item timeline__item--left reveal">
-              <div class="timeline__media timeline__media--cool"></div>
-              <div class="timeline__content">
-                <span class="timeline__dot"></span>
-                <h3>Continuous support</h3>
-                <p>Execution is reinforced with follow-up, review loops, and decision support.</p>
-                <a class="text-button" href="#contact">Discover more</a>
-              </div>
-            </article>
+          <article class="panel process-cta reveal">
+            <a class="button button--accent" href="#contact">
+              <span class="button__icon">◫</span>
+              <span>Book a Demo</span>
+            </a>
+            <p>Book a demo to see this process mapped to your current systems.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section analytics" id="analytics">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Smart Analytics</p>
+        <h2 class="section-title">A dashboard tuned for live operational decisions.</h2>
+      </div>
+
+      <div class="analytics-grid">
+        <article class="panel analytics-card analytics-card--brand reveal">
+          <div class="analytics-card__glow"></div>
+          <p class="analytics-card__label">plat-form</p>
+        </article>
+
+        <article class="panel analytics-card analytics-card--summary reveal" data-delay="60">
+          <div class="summary-group">
+            <div class="summary-stat">
+              <strong data-count="66" data-suffix="%">0%</strong>
+              <span>Optimal</span>
+            </div>
+            <div class="summary-stat">
+              <strong data-count="25" data-suffix="%">0%</strong>
+              <span>Stable</span>
+            </div>
+            <div class="summary-stat">
+              <strong data-count="9" data-suffix="%">0%</strong>
+              <span>Issues</span>
+            </div>
           </div>
-        </section>
+        </article>
 
-        <section class="section section--centered">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Real results that drive lasting impact for everyone</h2>
-          <p class="section-copy reveal">
-            We deliver sharper strategy, stronger retention, and better operational clarity for growing teams.
-          </p>
+        <article class="panel analytics-card analytics-card--status reveal" data-delay="120">
+          <p class="analytics-heading">Global System Status</p>
+          <div class="analytics-status-pill">Live operational health</div>
+        </article>
 
-          <div class="results-card reveal">
-            <div class="results-card__portrait"></div>
-            <div class="results-pill results-pill--tl reveal">Revenue</div>
-            <div class="results-pill results-pill--tr reveal">Engagement</div>
-            <div class="results-pill results-pill--ml reveal">NPS</div>
-            <div class="results-pill results-pill--mr reveal">Customers</div>
-            <div class="results-pill results-pill--bl reveal">ROI</div>
+        <article class="panel analytics-card analytics-card--monitor reveal" data-delay="40">
+          <p class="analytics-heading">30-day monitoring</p>
+          <div class="monitor-bars" id="monitorBars">
+            <span style="--bar: 84%"></span>
+            <span style="--bar: 80%"></span>
+            <span style="--bar: 78%"></span>
+            <span style="--bar: 83%"></span>
+            <span style="--bar: 81%"></span>
+            <span style="--bar: 79%"></span>
+            <span style="--bar: 86%"></span>
+            <span style="--bar: 82%"></span>
+            <span style="--bar: 88%"></span>
+            <span style="--bar: 90%"></span>
+            <span style="--bar: 76%"></span>
+            <span style="--bar: 60%"></span>
+            <span style="--bar: 42%"></span>
           </div>
-        </section>
-
-        <section class="section section--centered" id="team">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Meet the experts behind your business success</h2>
-
-          <div class="team-grid stagger-group" data-stagger="100">
-            <article class="team-card reveal">
-              <div class="team-card__photo team-card__photo--one"></div>
-              <h3>Nina Adams</h3>
-              <p>Strategy lead</p>
-            </article>
-            <article class="team-card reveal">
-              <div class="team-card__photo team-card__photo--two"></div>
-              <h3>James Carter</h3>
-              <p>Operations analyst</p>
-            </article>
-            <article class="team-card reveal">
-              <div class="team-card__photo team-card__photo--three"></div>
-              <h3>Emily Foster</h3>
-              <p>Growth advisor</p>
-            </article>
-            <article class="team-card reveal">
-              <div class="team-card__photo team-card__photo--four"></div>
-              <h3>Viktor Lee</h3>
-              <p>Client success</p>
-            </article>
+          <div class="monitor-metric">
+            <strong data-count="97.8" data-suffix="%">0%</strong>
+            <span>overall stability</span>
           </div>
-        </section>
+        </article>
 
-        <section class="section section--centered faq-section" id="contact">
-          <p class="section-kicker reveal">A top partner</p>
-          <h2 class="section-title reveal">Answers to your most common questions</h2>
+        <article class="panel analytics-card analytics-card--performance reveal" data-delay="100">
+          <p class="analytics-heading">Performance</p>
+          <p class="analytics-subhead">Current performance metrics</p>
+          <svg class="line-chart" viewBox="0 0 240 140" aria-hidden="true">
+            <path class="line-grid" d="M0 120H240 M0 90H240 M0 60H240 M0 30H240" />
+            <path class="line-path line-path--accent" d="M10 118L45 64L78 68L112 34L148 28L182 12L214 62" />
+            <path class="line-path line-path--light" d="M10 118L45 92L78 98L112 80L148 88L182 58L214 70" />
+          </svg>
+        </article>
 
-          <div class="faq-list reveal">
-            <article class="faq-item is-open">
-              <button class="faq-item__trigger" type="button" aria-expanded="true">
-                <span>How does your consulting process work?</span>
-                <span class="faq-item__icon">+</span>
+        <article class="panel analytics-card analytics-card--evolution reveal" data-delay="160">
+          <div class="analytics-evolution__header">
+            <div>
+              <p class="analytics-heading">System Evolution</p>
+              <p class="analytics-subhead">The pulse of progress</p>
+            </div>
+            <strong class="analytics-score" data-count="86" data-suffix="/100">0/100</strong>
+          </div>
+          <div class="evolution-bars">
+            <div class="evolution-bar">
+              <span style="--value: 38%">38%</span>
+              <small>Integration</small>
+            </div>
+            <div class="evolution-bar">
+              <span style="--value: 79%">79%</span>
+              <small>Efficiency</small>
+            </div>
+            <div class="evolution-bar">
+              <span style="--value: 92%">92%</span>
+              <small>Security</small>
+            </div>
+            <div class="evolution-bar">
+              <span style="--value: 84%">84%</span>
+              <small>Scaling</small>
+            </div>
+            <div class="evolution-bar evolution-bar--accent">
+              <span style="--value: 98%">98%</span>
+              <small>Uptime</small>
+            </div>
+          </div>
+        </article>
+
+        <div class="analytics-stack reveal" data-delay="220">
+          <article class="panel analytics-card analytics-card--battery">
+            <p class="analytics-card__tag">Gemini 2.5 Pro</p>
+            <div class="battery-meter">
+              <span></span>
+            </div>
+            <strong data-count="99.6" data-suffix="%">0%</strong>
+          </article>
+
+          <article class="panel analytics-card analytics-card--partners">
+            <p class="analytics-card__tag">Integration Partners</p>
+            <div class="partner-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel analytics-strip reveal" data-delay="260">
+          <span>News &amp; Achievements</span>
+          <span>10M+ Active Users</span>
+          <span>500K+ Deployments</span>
+          <span>1B+ API Calls</span>
+          <span>1.2B+ Daily Requests</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="pricing-head reveal">
+        <div>
+          <p class="section-kicker">Pricing</p>
+          <h2 class="section-title">Transparent plans built as operational modules.</h2>
+        </div>
+
+        <button class="pricing-toggle" id="pricingToggle" type="button" aria-pressed="false">
+          <span class="pricing-toggle__label pricing-toggle__label--active">Monthly</span>
+          <span class="pricing-toggle__track"><span class="pricing-toggle__knob"></span></span>
+          <span class="pricing-toggle__label">Yearly</span>
+        </button>
+      </div>
+
+      <div class="pricing-table">
+        <div class="pricing-row reveal" data-delay="0">
+          <article class="panel pricing-cell pricing-cell--visual">
+            <p class="pricing-plan">Studio</p>
+            <div class="pricing-visual pricing-visual--studio"></div>
+            <p class="pricing-plan__caption">For teams getting started</p>
+          </article>
+          <article class="panel pricing-cell pricing-cell--price">
+            <p class="pricing-label">Price</p>
+            <strong class="pricing-value" data-monthly="149" data-yearly="119">$149</strong>
+            <div class="pricing-mode">
+              <span class="pricing-mode__label pricing-mode__label--active">Monthly</span>
+              <span class="pricing-mode__switch"><span></span></span>
+              <span class="pricing-mode__label">Yearly</span>
+            </div>
+            <p class="pricing-save">You save 20%</p>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Plan</p>
+            <strong>Essential</strong>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Seats</p>
+            <strong>4</strong>
+          </article>
+          <article class="panel pricing-cell pricing-cell--features">
+            <ul>
+              <li>AI orchestration</li>
+              <li>Basic monitoring</li>
+              <li>Core security</li>
+              <li>Shared support</li>
+              <li>Starter analytics</li>
+            </ul>
+          </article>
+          <article class="panel pricing-cell pricing-cell--action">
+            <a class="button button--accent" href="#contact">Select Plan</a>
+          </article>
+        </div>
+
+        <div class="pricing-row reveal" data-delay="80">
+          <article class="panel pricing-cell pricing-cell--visual">
+            <p class="pricing-plan">Scale</p>
+            <div class="pricing-visual pricing-visual--scale"></div>
+            <p class="pricing-plan__caption">For scaling businesses</p>
+          </article>
+          <article class="panel pricing-cell pricing-cell--price">
+            <p class="pricing-label">Price</p>
+            <strong class="pricing-value" data-monthly="999" data-yearly="839">$999</strong>
+            <div class="pricing-mode">
+              <span class="pricing-mode__label pricing-mode__label--active">Monthly</span>
+              <span class="pricing-mode__switch"><span></span></span>
+              <span class="pricing-mode__label">Yearly</span>
+            </div>
+            <p class="pricing-save">You save 16%</p>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Plan</p>
+            <strong>Advanced</strong>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Seats</p>
+            <strong>6</strong>
+          </article>
+          <article class="panel pricing-cell pricing-cell--features">
+            <ul>
+              <li>All Studio features</li>
+              <li>AI optimization</li>
+              <li>Enhanced security</li>
+              <li>24/7 support</li>
+              <li>Auto-scaling</li>
+              <li>Full analytics</li>
+              <li>Priority API</li>
+            </ul>
+          </article>
+          <article class="panel pricing-cell pricing-cell--action">
+            <a class="button button--accent" href="#contact">Select Plan</a>
+          </article>
+        </div>
+
+        <div class="pricing-row reveal" data-delay="160">
+          <article class="panel pricing-cell pricing-cell--visual">
+            <p class="pricing-plan">Supreme</p>
+            <div class="pricing-visual pricing-visual--supreme"></div>
+            <p class="pricing-plan__caption">For enterprise operations</p>
+          </article>
+          <article class="panel pricing-cell pricing-cell--price">
+            <p class="pricing-label">Price</p>
+            <strong class="pricing-value" data-monthly="249" data-yearly="199">$249</strong>
+            <div class="pricing-mode">
+              <span class="pricing-mode__label pricing-mode__label--active">Monthly</span>
+              <span class="pricing-mode__switch"><span></span></span>
+              <span class="pricing-mode__label">Yearly</span>
+            </div>
+            <p class="pricing-save">You save 20%</p>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Plan</p>
+            <strong>Enterprise</strong>
+          </article>
+          <article class="panel pricing-cell">
+            <p class="pricing-label">Seats</p>
+            <strong>100</strong>
+          </article>
+          <article class="panel pricing-cell pricing-cell--features">
+            <ul>
+              <li>All Scale features</li>
+              <li>Dedicated support</li>
+              <li>Private hosting</li>
+              <li>Custom security</li>
+              <li>Training included</li>
+              <li>Priority features</li>
+              <li>Enterprise SLA</li>
+            </ul>
+          </article>
+          <article class="panel pricing-cell pricing-cell--action">
+            <a class="button button--accent" href="#contact">Select Plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="faq-layout">
+        <div>
+          <div class="section-intro reveal">
+            <p class="section-kicker">FAQ</p>
+            <h2 class="section-title">Answers for teams modernising operations.</h2>
+          </div>
+
+          <div class="accordion" id="faqAccordion">
+            <article class="accordion-item active reveal">
+              <button class="accordion-trigger" type="button">
+                <span>What exactly is Platform?</span>
+                <span class="accordion-icon">×</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  We start with a focused discovery pass, identify the highest-leverage opportunities, and build a
-                  tailored roadmap with implementation guidance and follow-up support.
-                </div>
+              <div class="accordion-panel">
+                <p>Platform is an intelligent, modular infrastructure system that combines AI and automation to help teams build, scale, and optimize their software. The neural core keeps learning from live conditions and reacts automatically.</p>
               </div>
             </article>
 
-            <article class="faq-item">
-              <button class="faq-item__trigger" type="button" aria-expanded="false">
-                <span>What industries do you specialize in?</span>
-                <span class="faq-item__icon">+</span>
+            <article class="accordion-item reveal" data-delay="60">
+              <button class="accordion-trigger" type="button">
+                <span>How does Platform's AI actually work?</span>
+                <span class="accordion-icon">+</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  We most often work with service businesses, SaaS teams, creative operators, and growing internal
-                  operations groups that need sharper execution.
-                </div>
+              <div class="accordion-panel">
+                <p>The system watches performance, traffic, and operational signals in real time, then uses predictive models and policy guardrails to adjust routing, capacity, and security posture with minimal human intervention.</p>
               </div>
             </article>
 
-            <article class="faq-item">
-              <button class="faq-item__trigger" type="button" aria-expanded="false">
-                <span>How long does it take to see results?</span>
-                <span class="faq-item__icon">+</span>
+            <article class="accordion-item reveal" data-delay="120">
+              <button class="accordion-trigger" type="button">
+                <span>How long does implementation take?</span>
+                <span class="accordion-icon">+</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  Quick wins typically show up in the first few weeks. Larger operational and revenue outcomes depend
-                  on scope, adoption speed, and the changes being implemented.
-                </div>
+              <div class="accordion-panel">
+                <p>Initial deployment usually takes minutes, not weeks. The discovery phase maps your stack quickly, and the first operational recommendations appear immediately after connection.</p>
               </div>
             </article>
 
-            <article class="faq-item">
-              <button class="faq-item__trigger" type="button" aria-expanded="false">
-                <span>Do you offer one-time consultations?</span>
-                <span class="faq-item__icon">+</span>
+            <article class="accordion-item reveal" data-delay="180">
+              <button class="accordion-trigger" type="button">
+                <span>What kind of support do you provide?</span>
+                <span class="accordion-icon">+</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  Yes. We support both one-off strategic sessions and longer advisory partnerships, depending on the
-                  complexity of the work.
-                </div>
+              <div class="accordion-panel">
+                <p>All plans include guided onboarding. Higher tiers add 24/7 support, dedicated success coverage, and custom incident workflows built around your team.</p>
               </div>
             </article>
 
-            <article class="faq-item">
-              <button class="faq-item__trigger" type="button" aria-expanded="false">
-                <span>Can small businesses afford your services?</span>
-                <span class="faq-item__icon">+</span>
+            <article class="accordion-item reveal" data-delay="240">
+              <button class="accordion-trigger" type="button">
+                <span>How does pricing work?</span>
+                <span class="accordion-icon">+</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  The pricing structure is meant to scale from lightweight consulting into deeper retainers, so smaller
-                  teams can start at a manageable level.
-                </div>
+              <div class="accordion-panel">
+                <p>Pricing is modular. You choose the operational surface you need today, then scale capacity, seats, and enterprise controls without changing the foundation.</p>
               </div>
             </article>
 
-            <article class="faq-item">
-              <button class="faq-item__trigger" type="button" aria-expanded="false">
-                <span>How do I get started?</span>
-                <span class="faq-item__icon">+</span>
+            <article class="accordion-item reveal" data-delay="300">
+              <button class="accordion-trigger" type="button">
+                <span>Is Platform secure?</span>
+                <span class="accordion-icon">+</span>
               </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  Use the contact button, pick a consultation type, and we will follow up with the next steps and a
-                  brief intake.
-                </div>
+              <div class="accordion-panel">
+                <p>Security is built into every module: encrypted traffic, policy-based automation, anomaly detection, and audit-ready workflows. Enterprise deployments can run in private infrastructure.</p>
               </div>
             </article>
           </div>
-        </section>
-      </main>
+        </div>
 
-      <footer class="site-footer">
-        <p>Motion recreation built from the analyzed reference video.</p>
-        <a class="text-button" href="#top">Back to top</a>
-      </footer>
+        <article class="panel faq-card reveal">
+          <div class="faq-card__image"></div>
+          <div class="faq-card__body">
+            <h3>You still have questions?</h3>
+            <p>Every team works differently. Let us show you how Platform fits the way your stack already runs.</p>
+            <a class="button button--accent" href="#contact">Book a Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section team" id="team">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Team</p>
+        <h2 class="section-title">Get to know the team behind the work. Makers, thinkers, and problem-solvers.</h2>
+      </div>
+
+      <div class="team-grid">
+        <article class="panel team-card team-card--title reveal">
+          <p>Team Platform</p>
+          <div class="team-dots" id="teamDots">
+            <button class="team-dot active" type="button" data-member="0" aria-label="Go to team member 1"></button>
+            <button class="team-dot" type="button" data-member="1" aria-label="Go to team member 2"></button>
+            <button class="team-dot" type="button" data-member="2" aria-label="Go to team member 3"></button>
+            <button class="team-dot" type="button" data-member="3" aria-label="Go to team member 4"></button>
+            <button class="team-dot" type="button" data-member="4" aria-label="Go to team member 5"></button>
+          </div>
+        </article>
+
+        <article class="panel team-card team-card--member reveal">
+          <div class="team-member active" data-member-card="0">
+            <h3>Sarah Bennett</h3>
+            <p>Director of Engineering</p>
+            <span>Builds the orchestration layer that lets Platform adapt without operational drag.</span>
+          </div>
+          <div class="team-member" data-member-card="1">
+            <h3>Leon Hartmann</h3>
+            <p>Systems Architect</p>
+            <span>Designs the modular backbone behind secure, resilient deployments.</span>
+          </div>
+          <div class="team-member" data-member-card="2">
+            <h3>Mina Okafor</h3>
+            <p>Security Lead</p>
+            <span>Owns the adaptive policy engine and real-time protection workflows.</span>
+          </div>
+          <div class="team-member" data-member-card="3">
+            <h3>Hugo Larsen</h3>
+            <p>Optimization Engineer</p>
+            <span>Turns system telemetry into faster, leaner production behavior.</span>
+          </div>
+          <div class="team-member" data-member-card="4">
+            <h3>Ana Petrova</h3>
+            <p>Design Systems Lead</p>
+            <span>Connects product clarity with dense operational interfaces.</span>
+          </div>
+        </article>
+
+        <article class="panel team-card team-card--portrait reveal">
+          <div class="portrait active" data-member-portrait="0"></div>
+          <div class="portrait portrait--alt" data-member-portrait="1"></div>
+          <div class="portrait portrait--violet" data-member-portrait="2"></div>
+          <div class="portrait portrait--amber" data-member-portrait="3"></div>
+          <div class="portrait portrait--slate" data-member-portrait="4"></div>
+        </article>
+
+        <article class="panel team-card team-card--controls reveal">
+          <button class="process-arrow" id="teamPrev" type="button" aria-label="Previous team member">←</button>
+          <button class="process-arrow" id="teamNext" type="button" aria-label="Next team member">→</button>
+        </article>
+
+        <article class="panel team-card team-card--quote reveal">
+          <p>Focused on precision execution and making complex infrastructure feel calm, obvious, and usable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journal" id="journal">
+      <div class="section-intro reveal">
+        <p class="section-kicker">Journal</p>
+        <h2 class="section-title">What modern infrastructure teams are thinking about right now.</h2>
+      </div>
+
+      <div class="journal-grid">
+        <article class="panel journal-card reveal">
+          <p class="journal-card__meta">Written by Bruce Sommers</p>
+          <h3>Ethical AI Systems for Scalable Products</h3>
+          <div class="journal-card__mosaic">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <a class="circle-link circle-link--bottom" href="#journal" aria-label="Read article about ethical AI systems">→</a>
+        </article>
+
+        <article class="panel journal-card reveal" data-delay="100">
+          <p class="journal-card__meta">Written by Leon Hartmann</p>
+          <h3>Zero-Latency Infrastructure for Real-Time AI</h3>
+          <div class="journal-card__mosaic journal-card__mosaic--right">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <a class="circle-link circle-link--bottom" href="#journal" aria-label="Read article about zero-latency infrastructure">→</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee__track">
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+      </div>
+      <div class="marquee__track marquee__track--reverse">
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+        <span>plat-form</span>
+        <span>/</span>
+        <span>Your software business, streamlined for growth.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-wordmark">
+      <div class="footer-wordmark__ribbon"></div>
+      <p id="footerWordmark">plat-form</p>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="footer-grid">
+      <article class="panel footer-card footer-card--about">
+        <a class="brand-lockup brand-lockup--footer" href="#top">
+          <span class="brand-lockup__name">plat-form</span>
+          <span class="brand-lockup__tag">The smarter way to build, run and scale your business.</span>
+        </a>
+      </article>
+
+      <article class="panel footer-card footer-card--address">
+        <p>Westerdoksdijk 500</p>
+        <p>1013 BX — Amsterdam</p>
+        <p>Netherlands, EU</p>
+      </article>
+
+      <article class="panel footer-card footer-card--links">
+        <nav>
+          <a href="#top">Home</a>
+          <a href="#products">Work</a>
+          <a href="#process">Process</a>
+          <a href="#analytics">Smart Analytics</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#team">Team</a>
+        </nav>
+      </article>
+
+      <article class="panel footer-card footer-card--links">
+        <nav>
+          <a href="#journal">Platform Lab®</a>
+          <a href="#contact">Contact</a>
+          <a href="#top">Terms &amp; Service</a>
+          <a href="#top">Privacy Policy</a>
+          <a href="#top">GDPR Compliance</a>
+          <a href="#top">Data Protection</a>
+          <a href="#top">404</a>
+        </nav>
+      </article>
+
+      <article class="panel footer-card footer-card--newsletter">
+        <h3>Keep up with our journey and updates</h3>
+        <p>Get the latest news, insights directly to your inbox.</p>
+        <form class="newsletter-form" onsubmit="return false">
+          <input type="text" placeholder="Your Name" />
+          <div class="newsletter-form__row">
+            <input type="email" placeholder="Your Email" />
+            <button class="button button--accent button--square" type="submit">→</button>
+          </div>
+        </form>
+        <small>By submitting, you agree to our Terms &amp; Service.</small>
+        <small>No spam, just awesome updates.</small>
+      </article>
+
+      <article class="panel footer-card footer-card--bottom">2021-2025 © Platform B.V. | All rights reserved.</article>
+      <article class="panel footer-card footer-card--bottom">Platform B.V., registered in the Netherlands, specializes in innovative AI and development services, with a core focus on infrastructure solutions.</article>
+      <article class="panel footer-card footer-card--socials">
+        <a href="#top" aria-label="LinkedIn">in</a>
+        <a href="#top" aria-label="X">X</a>
+        <a href="#top" aria-label="Instagram">◎</a>
+        <a href="#top" aria-label="YouTube">▻</a>
+      </article>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
